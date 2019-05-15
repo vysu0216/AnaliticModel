@@ -13,18 +13,26 @@ public class Module {
 
     private double p1[], p2[], p3[] = new double[20];
     private double s01, s02 = 0.0;
-    private double s,p = 0.0;
+    private double s, p = 0.0;
+
+    //число сочетаний из n по m
+    private double NS(int n, int m) {
+        double a = 1.0;
+        for (int i = 1; i <= n - m; i++) {
+            a = a*(m+i)/i;
+        }
+        return a;
+    }
 
     //Вычисляем характеристики для для 1-й СМО
-    private double calcS1Characteristics(){
-
+    private double calcS1Characteristics() {
 
         return 0.0;
     }
 
 
     public static void main(String[] args) {
-
+        System.out.println(new Module().NS(8,3));
     }
 
 }
